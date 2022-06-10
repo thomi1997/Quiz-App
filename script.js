@@ -108,6 +108,7 @@ function updateToNextQuestion() {
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
+    overlayAdd();
 }
 
 
@@ -127,6 +128,17 @@ function answer(selection) {
         audio_fail.play();
     }
     document.getElementById('next-button').disabled = false;
+    overlayRemove();
+}
+
+
+function overlayAdd() {
+    document.getElementById('answer_overlay').classList.add('d-none');
+}
+
+
+function overlayRemove() {
+    document.getElementById('answer_overlay').classList.remove('d-none');
 }
 
 

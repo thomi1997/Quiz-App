@@ -66,3 +66,16 @@ body {
     justify-content: center;
     margin-top: 24px;
 }
+
+.answer-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.d-none {
+    display: none;
+}
