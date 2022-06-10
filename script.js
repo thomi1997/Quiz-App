@@ -151,7 +151,7 @@ function resetAnswerButtons() {
 
 
 function restartGame() {
-    document.getElementById('header-image').src = 'img/img-1.jpg';
+    document.getElementById('header-image').src = 'img/question.jpg';
     document.getElementById('question-body').style = ''; // questionbody wieder anzeigen
     document.getElementById('end-screen').style = 'display: none'; // Endscreen ausblenden
     rightQuestions = 0;
