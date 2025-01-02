@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.quiz__count {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(231, 130, 48);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.250rem rgba(0, 0, 0, 0.5);
+    margin: 0 0 1.4rem 0;
+    padding: 0.25rem 0;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 2.5rem;
+        background-color: rgb(237, 250, 255);
+        position: absolute;
+        left: 50%;
+    }
+}
+
+
+.quiz__count-counter,
+.quiz__count-ranking {
+    width: 100%;
+    text-align: center;
+}
+
+.quiz__count-counter-main,
+.quiz__count-ranking-main {
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(237, 250, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+.quiz__count-counter-number,
+.quiz__count-ranking-number {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(237, 250, 255);
+    font-family: 'Roboto', sans-serif;
+}

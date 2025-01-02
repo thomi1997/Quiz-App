@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+body {
+    background-image: linear-gradient(160deg, $color-dark-blue,$color-dark-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.final-headline {
+    font-size: 38px;
+    margin-bottom: 32px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.d-none {
+    display: none;
+}

@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+
+.quiz__card {
+    width: 80%;
+}
+
+.quiz__card-progress {
+
+}
+
+.quiz__card-progress-bar {
+
+}
+
+.quiz__card-questions {
+
+}
+
+.quiz__card-questions-main {
+    
+}
+
+.quiz__card-questions-answer {
+
+}
+
+.quiz__card-questions-answer-main {
+
+}
+
+/*.answer-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}*/
+
+.question-img {
+    width: 10rem;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: 12px;
+}
+
+.bg-success,
+.bg-danger {
+    color: white;
+}

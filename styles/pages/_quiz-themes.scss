@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.quiz__themes {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.quiz__themes-img {
+    width: 6rem;
+    height: 6rem;
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+}
+
+.quiz__themes-button {
+    width: calc(50% - 0.5rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    background-color: $color-bright-blue;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.250rem rgba(0, 0, 0, 0.5);
+
+    @media (max-width: $breakpoint-sm) {
+        width: 100%;
+    }
+}
+
+.quiz__themes-button-main {
+    font-size: 2rem;
+    color: $color-white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+    margin-left: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+}

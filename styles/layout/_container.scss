@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.container {
+    max-width: 75rem;
+    margin: 0px auto;
+}
+
+.quiz {
+    padding: 9rem 0 0 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $breakpoint-sm) {
+        height: 100%;
+    }
+}

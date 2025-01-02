@@ -4,20 +4,25 @@ let rightQuestions = 0;
 let currentQuestion = 0;
 let audio_success = new Audio('audio/success.mp3');
 let audio_fail = new Audio('audio/fail.mp3');
+const quizId = document.getElementById('quiz_id');
+const headerNav = document.getElementById('header-nav');
 
 
 function init() {
-    let quizId = document.getElementById('quiz_id');
     quizId.innerHTML = renderQuizAllThemes();
+    headerNav.innerHTML = renderHeaderThemes();
+    headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
 }
 
 
 async function startFunAnimalsFacts() {
     let response = await fetch('./scripts/fun-animal-facts.json');
     questions = await response.json();
-    let quizId = document.getElementById('quiz_id');
     quizId.innerHTML = '';
     quizId.innerHTML = renderFunAnimalsFacts();
+    headerNav.innerHTML = '';
+    headerNav.innerHTML = renderHeaderFunAnimalsFacts();
+    headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
     //console.log('Fragen', questions);
     document.getElementById('all-questions').innerHTML = questions.length;
     showQuestion();
@@ -132,5 +137,12 @@ function restartGame() {
     document.getElementById('end-screen').style = 'display: none'; // Endscreen ausblenden
     rightQuestions = 0;
     currentQuestion = 0;
+    init();
+}
+
+
+function closeInGame() {
+    quizId.innerHTML = '';
+    headerNav.innerHTML = '';
     init();
 }
