@@ -1,0 +1,82 @@
+[
+    {
+        "question": "Welches Tier furzt nicht?",
+        "answer_1": "Elefant",
+        "answer_2": "Faultier",
+        "answer_3": "Axolotl",
+        "answer_4": "Känguru",
+        "right_answer": 3
+    },
+    {
+        "question": "Was ist der Lieblingssnack von Pinguinen?",
+        "answer_1": "Pizza",
+        "answer_2": "Fisch",
+        "answer_3": "Pommes",
+        "answer_4": "Torte",
+        "right_answer": 2
+    },
+    {
+        "question": "Welches Tier hat blaue Zungen?",
+        "answer_1": "Giraffe",
+        "answer_2": "Nilpferd",
+        "answer_3": "Koala",
+        "answer_4": "Kuh",
+        "right_answer": 1
+    },
+    {
+        "question": "Wie viele Gehirne hat ein Oktopus?",
+        "answer_1": "9",
+        "answer_2": "2",
+        "answer_3": "1",
+        "answer_4": "5",
+        "right_answer": 1
+    },
+    {
+        "question": "Welches Tier kann seinen Kopf drehen?",
+        "answer_1": "Hund",
+        "answer_2": "Katze",
+        "answer_3": "Eule",
+        "answer_4": "Delfin",
+        "right_answer": 3
+    },
+    {
+        "question": "Was macht ein Faultier am meisten?",
+        "answer_1": "Essen",
+        "answer_2": "Schlafen",
+        "answer_3": "Yoga",
+        "answer_4": "Party",
+        "right_answer": 2
+    },
+    {
+        "question": "Welches Tier pupst rosa Wolken?",
+        "answer_1": "Hamster",
+        "answer_2": "Hering",
+        "answer_3": "Flamingo",
+        "answer_4": "Maulwurf",
+        "right_answer": 2
+    },
+    {
+        "question": "Welches Tier lacht wie ein Mensch?",
+        "answer_1": "Hyäne",
+        "answer_2": "Papagei",
+        "answer_3": "Delfin",
+        "answer_4": "Ziege",
+        "right_answer": 1
+    },
+    {
+        "question": "Wie lange hält ein Kamel ohne Wasser aus?",
+        "answer_1": "2 Wochen",
+        "answer_2": "7 Tage",
+        "answer_3": "3 Tage",
+        "answer_4": "Einen Monat",
+        "right_answer": 2
+    },
+    {
+        "question": "Welches Tier hat vier Knie?",
+        "answer_1": "Hund",
+        "answer_2": "Elefant",
+        "answer_3": "Frosch",
+        "answer_4": "Hase",
+        "right_answer": 2
+    }
+]
