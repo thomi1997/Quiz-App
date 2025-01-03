@@ -1,33 +1,3 @@
-let questions = [];
-
-let rightQuestions = 0;
-let currentQuestion = 0;
-let audio_success = new Audio('audio/success.mp3');
-let audio_fail = new Audio('audio/fail.mp3');
-const quizId = document.getElementById('quiz_id');
-const headerNav = document.getElementById('header-nav');
-
-
-function init() {
-    quizId.innerHTML = renderQuizAllThemes();
-    headerNav.innerHTML = renderHeaderThemes();
-    headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
-}
-
-
-async function startFunAnimalsFacts() {
-    let response = await fetch('./scripts/fun-animal-facts.json');
-    questions = await response.json();
-    quizId.innerHTML = '';
-    quizId.innerHTML = renderFunAnimalsFacts();
-    headerNav.innerHTML = '';
-    headerNav.innerHTML = renderHeaderFunAnimalsFacts();
-    headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
-    //console.log('Fragen', questions);
-    document.getElementById('all-questions').innerHTML = questions.length;
-    showQuestion();
-}
-
 function showQuestion() {
     if (gameIsOver()) {
         showEndScreen();
@@ -51,15 +21,6 @@ function showEndScreen() {
     document.getElementById('header-image').src = 'img/win.png';
 }
 
-
-function updateProgressBar() {
-    let percent = (currentQuestion + 1) / questions.length;
-    percent = Math.round(percent * 100);
-    document.getElementById('progress-bar-id').innerHTML = `${percent} %`;
-    document.getElementById('progress-bar-id').style.width = `${percent}%`;
-}
-
-
 function updateToNextQuestion() {
     let question = questions[currentQuestion];
     document.getElementById('question-number').innerHTML = currentQuestion + 1;
@@ -68,28 +29,40 @@ function updateToNextQuestion() {
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
-    overlayAdd();
+    aktiveAnswers();
 }
 
 
+function updateProgressBar() {
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById('progress-bar-id').innerHTML = `${percent} %`;
+    document.getElementById('progress-bar-id').style.width = `${percent}%`;
+}
+
+//antwort wird ausgewählt!
 function answer(selection) {
     let question = questions[currentQuestion];
     let selectedQuestionNumber = selection.slice(-1);
     let idOfRightAnswer = `answer_${question['right_answer']}`;
+    ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer);
+    document.getElementById('next-button').disabled = false;
+}
+
+
+function ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer) {
     if (selectedQuestionNumber == question['right_answer']) {
         answerTrue(selection);
     } else {
         answerFalse(selection, idOfRightAnswer);
     }
-    document.getElementById('next-button').disabled = false;
-    overlayRemove();
 }
 
 
 function answerTrue(selection) {
     document.getElementById(selection).parentNode.classList.add('bg-success');
-    console.log('Richtige Antwort!!');
-    audio_success.play();
+    disableAnswers();
+    //audio_success.play();
     rightQuestions++;
 }
 
@@ -97,17 +70,24 @@ function answerTrue(selection) {
 function answerFalse(selection, idOfRightAnswer) {
     document.getElementById(selection).parentNode.classList.add('bg-danger');
     document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
-    audio_fail.play();
+    disableAnswers();
+    //audio_fail.play();
 }
 
 
-function overlayAdd() {
-    document.getElementById('answer_overlay').classList.add('d-none');
+function aktiveAnswers() {
+    document.getElementById('a').style.pointerEvents = "auto";
+    document.getElementById('b').style.pointerEvents = "auto";
+    document.getElementById('c').style.pointerEvents = "auto";
+    document.getElementById('d').style.pointerEvents = "auto";
 }
 
 
-function overlayRemove() {
-    document.getElementById('answer_overlay').classList.remove('d-none');
+function disableAnswers() {
+    document.getElementById('a').style.pointerEvents = "none";
+    document.getElementById('b').style.pointerEvents = "none";
+    document.getElementById('c').style.pointerEvents = "none";
+    document.getElementById('d').style.pointerEvents = "none";
 }
 
 

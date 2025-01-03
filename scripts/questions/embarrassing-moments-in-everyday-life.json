@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Peinliche Momente im Alltag",
+        "question": "Was passiert, wenn man vor vielen Leuten stolpert?",
+        "answer_1": "Man wird unsichtbar",
+        "answer_2": "Alle starren einen an",
+        "answer_3": "Die Zeit bleibt stehen",
+        "answer_4": "Man wird Präsident",
+        "right_answer": 2
+    },
+    {
+        "question": "Was sollte man nicht tun, wenn der Chef anruft?",
+        "answer_1": "Grüßen",
+        "answer_2": "Laut pupsen",
+        "answer_3": "Fragen stellen",
+        "answer_4": "Arbeiten",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist der häufigste Grund, warum man den falschen Namen sagt?",
+        "answer_1": "Man denkt an jemanden anderen",
+        "answer_2": "Man ist hungrig",
+        "answer_3": "Zeitverschiebung",
+        "answer_4": "Ein Alien flüstert es",
+        "right_answer": 1
+    },
+    {
+        "question": "Was sollte man nicht in der U-Bahn tun?",
+        "answer_1": "Hinsetzen",
+        "answer_2": "Laut Lieder singen",
+        "answer_3": "Zeitung lesen",
+        "answer_4": "Schlafen",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn man aus Versehen winkt, und niemand schaut?",
+        "answer_1": "Man fühlt sich dumm",
+        "answer_2": "Man wird reich",
+        "answer_3": "Ein Engel lacht",
+        "answer_4": "Der Boden öffnet sich",
+        "right_answer": 1
+    },
+    {
+        "question": "Was ist das Schlimmste, das beim ersten Date passieren kann?",
+        "answer_1": "Das Handy fällt ins Essen",
+        "answer_2": "Die Pizza explodiert",
+        "answer_3": "Man nennt den falschen Namen",
+        "answer_4": "Der Stuhl bricht zusammen",
+        "right_answer": 3
+    },
+    {
+        "question": "Was sollte man nicht tun, wenn man niesen muss?",
+        "answer_1": "Niesen",
+        "answer_2": "Es unterdrücken und furzen",
+        "answer_3": "Hatschi sagen",
+        "answer_4": "Weglaufen",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn man sich in der Schlange vordrängelt?",
+        "answer_1": "Man bekommt einen Preis",
+        "answer_2": "Die Schlange wird länger",
+        "answer_3": "Man wird ein VIP",
+        "answer_4": "Andere werden sauer",
+        "right_answer": 4
+    },
+    {
+        "question": "Was sagt man aus Versehen beim Bäcker?",
+        "answer_1": "Hallo, bitte 2 Brötchen.",
+        "answer_2": "Einmal Danke, tschüss!",
+        "answer_3": "Wo bin ich hier?",
+        "answer_4": "Kekse sind die Antwort.",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist peinlich, wenn man eine Mail schreibt?",
+        "answer_1": "Kein Betreff schreiben",
+        "answer_2": "Liebe Grüße schreiben",
+        "answer_3": "Die Tastatur küssen",
+        "answer_4": "Den falschen Empfänger wählen",
+        "right_answer": 4
+    }
+]

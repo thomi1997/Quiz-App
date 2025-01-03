@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Seltsame Essensgewohnheiten",
+        "question": "Welche Frucht wächst nicht auf Bäumen?",
+        "answer_1": "Banane",
+        "answer_2": "Erdbeere",
+        "answer_3": "Apfel",
+        "answer_4": "Birne",
+        "right_answer": 2
+    },
+    {
+        "question": "Was isst ein Panda am liebsten?",
+        "answer_1": "Pizza",
+        "answer_2": "Bambus",
+        "answer_3": "Bambus und nur Bambus",
+        "answer_4": "Karotten",
+        "right_answer": 3
+    },
+    {
+        "question": "Was ist der Hauptbestandteil von heißer Schokolade?",
+        "answer_1": "Butter",
+        "answer_2": "Salz",
+        "answer_3": "Kakao",
+        "answer_4": "Senf",
+        "right_answer": 3
+    },
+    {
+        "question": "Welches Gemüse weint mit dir?",
+        "answer_1": "Zwiebel ",
+        "answer_2": "Karotte",
+        "answer_3": "Brokkoli",
+        "answer_4": "Sellerie",
+        "right_answer": 1
+    },
+    {
+        "question": "Welches Tier trinkt keine Milch?",
+        "answer_1": "Katze",
+        "answer_2": "Kuh",
+        "answer_3": "Mensch",
+        "answer_4": "Vogel",
+        "right_answer": 4
+    },
+    {
+        "question": "Was isst man in Australien auf Pizza?",
+        "answer_1": "Honig",
+        "answer_2": "Käse",
+        "answer_3": "Kängurufleisch",
+        "answer_4": "Nudeln",
+        "right_answer": 3
+    },
+    {
+        "question": "Welches Gericht isst man mit der Nase?",
+        "answer_1": "Suppe",
+        "answer_2": "Burger",
+        "answer_3": "Nichts, das ist Unsinn",
+        "answer_4": "Fisch",
+        "right_answer": 3
+    },
+    {
+        "question": "Welche Farbe hat echter Wasabi?",
+        "answer_1": "Grün",
+        "answer_2": "Rot",
+        "answer_3": "Blau",
+        "answer_4": "Gelb",
+        "right_answer": 1
+    },
+    {
+        "question": "Was ist der Unterschied zwischen Marmelade und Gelee?",
+        "answer_1": "Gelee tanzt",
+        "answer_2": "Marmelade fliegt",
+        "answer_3": "Marmelade hat Fruchtstücke",
+        "answer_4": "Es gibt keinen",
+        "right_answer": 3
+    },
+    {
+        "question": "Warum hat ein Croissant diese Form?",
+        "answer_1": "Es soll einen Halbmond darstellen",
+        "answer_2": "Weil jemand es so gebacken hat",
+        "answer_3": "Zufall",
+        "answer_4": "Französische Magie",
+        "right_answer": 2
+    }
+]

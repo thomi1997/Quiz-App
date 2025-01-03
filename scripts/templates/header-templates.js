@@ -13,10 +13,10 @@ function renderHeaderThemes() {
 }
 
 
-function renderHeaderFunAnimalsFacts() {
+function renderHeaderGame(title) {
     return /*html*/ `
 <div class="header--game">
-    <h1 class="header__game-main">Lustige Tierfakten</h1>
+    <h1 class="header__game-main">${title}</h1>
     <div onclick="closeInGame()" class="header__game-button-close">
         <img class="header__game-cross-img" src="../../img/cross.png" alt="">
     </div>

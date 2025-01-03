@@ -1,7 +1,22 @@
 @use "../abstracts" as *;
 
 .quiz__card {
-    width: 80%;
+    width: 90%;
+}
+
+.quiz__card-data {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'Roboto', sans-serif;
+}
+
+.quiz__card-data-question-number {
+
+}
+
+.quiz__card-data-time {
+    
 }
 
 .quiz__card-progress {
@@ -9,7 +24,7 @@
 }
 
 .quiz__card-progress-bar {
-
+    background-color: aqua;
 }
 
 .quiz__card-questions {
@@ -28,15 +43,6 @@
 
 }
 
-/*.answer-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 150px;
-    right: 0;
-    left: 0;
-    z-index: 99;
-}*/
-
 .question-img {
     width: 10rem;
 }
@@ -45,11 +51,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
     padding-top: 12px;
 }
 
-.bg-success,
+.bg-success {
+    color: green;
+}
+
 .bg-danger {
-    color: white;
+    color: red;
 }
