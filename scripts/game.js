@@ -1,5 +1,6 @@
 function showQuestion() {
     if (gameIsOver()) {
+        updateProgressBar();
         showEndScreen();
     } else {
         updateToNextQuestion();
@@ -23,8 +24,9 @@ function showEndScreen() {
 
 function updateToNextQuestion() {
     let question = questions[currentQuestion];
-    document.getElementById('question-number').innerHTML = currentQuestion + 1;
-    document.getElementById('questiontext').innerHTML = question['question'];
+    document.getElementById('question-number-1').innerHTML = currentQuestion + 1;
+    document.getElementById('question-number-2').innerHTML = `${currentQuestion + 1}.`;
+    document.getElementById('question-text').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
@@ -34,9 +36,9 @@ function updateToNextQuestion() {
 
 
 function updateProgressBar() {
-    let percent = (currentQuestion + 1) / questions.length;
+    let percent = (currentQuestion) / questions.length;
     percent = Math.round(percent * 100);
-    document.getElementById('progress-bar-id').innerHTML = `${percent} %`;
+    document.getElementById('progress-bar-number').innerHTML = `${percent} %`;
     document.getElementById('progress-bar-id').style.width = `${percent}%`;
 }
 
@@ -60,7 +62,13 @@ function ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswe
 
 
 function answerTrue(selection) {
-    document.getElementById(selection).parentNode.classList.add('bg-success');
+    document.getElementById(selection).parentNode.classList.add('color-bright-grey');
+    const answerElement = document.getElementById(selection);
+    const parentElement = answerElement.closest('.quiz__card-answers');
+    const parentId = parentElement.id;
+    document.getElementById(`letter-icon-${parentId}`).classList.add('move-icon');
+    document.getElementById(`icon-bg-${parentId}`).style="background-color: rgb(204, 219, 232)";
+
     disableAnswers();
     //audio_success.play();
     rightQuestions++;
@@ -68,10 +76,33 @@ function answerTrue(selection) {
 
 
 function answerFalse(selection, idOfRightAnswer) {
-    document.getElementById(selection).parentNode.classList.add('bg-danger');
-    document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
+    document.getElementById(selection).parentNode.classList.add('color-bright-grey');
+    document.getElementById(idOfRightAnswer).parentNode.classList.add('color-bright-grey');
+    getParentTrueId(idOfRightAnswer);
+    getParentFalseId(selection);
     disableAnswers();
     //audio_fail.play();
+}
+
+
+function getParentTrueId(idOfRightAnswer) {
+    const answerTrueElement = document.getElementById(idOfRightAnswer);
+    const parentTrueElement = answerTrueElement.closest('.quiz__card-answers');
+    const parentIdTrue = parentTrueElement.id;
+    document.getElementById(`letter-icon-${parentIdTrue}`).classList.add('move-icon');
+    document.getElementById(`icon-bg-${parentIdTrue}`).style="background-color: rgb(204, 219, 232)";
+    document.getElementById(`icon-bg-${parentIdTrue}`).style="background-color: rgb(204, 219, 232)";
+    document.getElementById(`icon-${parentIdTrue}`).src="../img/true-icon.png";
+
+}
+
+function getParentFalseId(selection) {
+    const answerElement = document.getElementById(selection);
+    const parentElement = answerElement.closest('.quiz__card-answers');
+    const parentId = parentElement.id;
+    document.getElementById(`letter-icon-${parentId}`).classList.add('move-icon');
+    document.getElementById(`icon-bg-${parentId}`).style="background-color: rgb(204, 219, 232)";
+    document.getElementById(`icon-${parentId}`).src="../img/false-icon.png";
 }
 
 
@@ -94,27 +125,37 @@ function disableAnswers() {
 function nextQuestion() {
     currentQuestion++;
     document.getElementById('next-button').disabled = true;
+    resetAnswerStructure();
     resetAnswerButtons();
     showQuestion();
 }
 
 
+function resetAnswerStructure() {
+    document.getElementById('letter-icon-a').classList.remove('move-icon');
+    document.getElementById('letter-icon-b').classList.remove('move-icon');
+    document.getElementById('letter-icon-c').classList.remove('move-icon');
+    document.getElementById('letter-icon-d').classList.remove('move-icon');
+    document.getElementById('icon-bg-a').style="background-color: rgb(231, 130, 48)";
+    document.getElementById('icon-bg-b').style="background-color: rgb(231, 130, 48)";
+    document.getElementById('icon-bg-c').style="background-color: rgb(231, 130, 48)";
+    document.getElementById('icon-bg-d').style="background-color: rgb(231, 130, 48)";
+    
+}
+
+
 function resetAnswerButtons() {
-    document.getElementById('answer_1').parentNode.classList.remove('bg-danger');
-    document.getElementById('answer_1').parentNode.classList.remove('bg-success');
-    document.getElementById('answer_2').parentNode.classList.remove('bg-danger');
-    document.getElementById('answer_2').parentNode.classList.remove('bg-success');
-    document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
-    document.getElementById('answer_3').parentNode.classList.remove('bg-success');
-    document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
-    document.getElementById('answer_4').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_1').parentNode.classList.remove('color-bright-grey');
+    document.getElementById('answer_2').parentNode.classList.remove('color-bright-grey');
+    document.getElementById('answer_3').parentNode.classList.remove('color-bright-grey');
+    document.getElementById('answer_4').parentNode.classList.remove('color-bright-grey');
 }
 
 
 function restartGame() {
     document.getElementById('header-image').src = 'img/question.jpg';
-    document.getElementById('question-body').style = ''; // questionbody wieder anzeigen
-    document.getElementById('end-screen').style = 'display: none'; // Endscreen ausblenden
+    document.getElementById('question-body').style = '';
+    document.getElementById('end-screen').style = 'display: none';
     rightQuestions = 0;
     currentQuestion = 0;
     init();

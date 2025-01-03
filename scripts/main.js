@@ -2,11 +2,14 @@ let questions = [];
 let rightQuestions = 0;
 let currentQuestion = 0;
 
+
 let audio_success = new Audio('audio/success.mp3');
 let audio_fail = new Audio('audio/fail.mp3');
 
+
 const quizId = document.getElementById('quiz_id');
 const headerNav = document.getElementById('header-nav');
+
 
 let urlFunAnimalFacts = './scripts/questions/fun-animal-facts.json';
 let urlEmbarrassingMomentsInEverydayLife = './scripts/questions/embarrassing-moments-in-everyday-life.json';
@@ -24,73 +27,119 @@ function init() {
     quizId.innerHTML = renderQuizThemeMenu();
     headerNav.innerHTML = renderHeaderThemes();
     headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
-    //startQuiz(0);
 }
 
 
 async function startQuiz(element) {
-    if (element.id == 0) {
+    let id = element.id;
+    await whichQuizTheme(id);
+    headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
+    document.getElementById('all-questions').innerHTML = questions.length;
+    showQuestion();
+}
+
+
+async function  whichQuizTheme(id) {
+    await renderQuizTheme_0(id);
+    await renderQuizTheme_1(id);
+    await renderQuizTheme_2(id);
+    await renderQuizTheme_3(id);
+    await renderQuizTheme_4(id);
+    await renderQuizTheme_5(id);
+    await renderQuizTheme_6(id);
+    await renderQuizTheme_7(id);
+    await renderQuizTheme_8(id);
+    await renderQuizTheme_9(id);
+}
+
+
+async function renderQuizTheme_0(id) {
+    if (id == 0) {
         await loadQuestions(urlFunAnimalFacts);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 1) {
+
+async function renderQuizTheme_1(id) {
+    if (id == 1) {
         await loadQuestions(urlEmbarrassingMomentsInEverydayLife);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 2) {
+
+async function renderQuizTheme_2(id) {
+    if (id == 2) {
         await loadQuestions(urlStrangeEatingHabits);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 3) {
+
+async function renderQuizTheme_3(id) {
+    if (id == 3) {
         await loadQuestions(urlMovieAndSeriesParodies);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 4) {
+
+async function renderQuizTheme_4(id) {
+    if (id == 4) {
         await loadQuestions(urlUselessKnowledge);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 5) {
+
+async function renderQuizTheme_5(id) {
+    if (id == 5) {
         await loadQuestions(urlSuperheroesOnTheWrongTrack);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 6) {
+
+async function renderQuizTheme_6(id) {
+    if (id == 6) {
         await loadQuestions(urlMishapsInTheKitchen);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 7) {
+
+async function renderQuizTheme_7(id) {
+    if (id == 7) {
         await loadQuestions(urlStrangeInventions);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 8) {
+
+async function renderQuizTheme_8(id) {
+    if (id == 8) {
         await loadQuestions(urlUnexpectedFactsAboutCelebrities);
         clearQuizAndNav();
         renderQuizAndNav();
     }
+}
 
-    if (element.id == 9) {
+
+async function renderQuizTheme_9(id) {
+    if (id == 9) {
         await loadQuestions(urlFunnyThingsThatChildrenBelieve);
         clearQuizAndNav();
         renderQuizAndNav();
     }
-    headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
-    document.getElementById('all-questions').innerHTML = questions.length;
-    showQuestion();
 }
 
 
@@ -107,6 +156,7 @@ function clearQuizAndNav() {
 
 function renderQuizAndNav() {
     let title = questions[0].title;
-    quizId.innerHTML = renderQuiz();
+    let questionNumber = currentQuestion + 1;
+    quizId.innerHTML = renderQuiz(questionNumber);
     headerNav.innerHTML = renderHeaderGame(title);
 }

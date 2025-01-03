@@ -1,6 +1,10 @@
-$color-white: rgb(237, 250, 255);
-$color-bright-blue: rgb(44, 64, 88);
-$color-dark-blue: rgb(36, 42, 64);
+$color-white: rgb(237, 250, 255) !default;
+$color-black: rgb(20, 20, 20) !default;
+$color-bright-blue: rgb(44, 64, 88) !default;
+$color-dark-blue: rgb(36, 42, 64) !default;
+$color-orange: rgb(231, 130, 48) !default;
+$color-bright-grey: rgb(204, 219, 232) !default;
+$font-size-quiz-form: 1.4rem !default;
 
 /** 1200px oder schmaler */
 $breakpoint-lg: 75em!default;

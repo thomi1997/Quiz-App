@@ -15,8 +15,16 @@
 
 .quiz__themes-img {
     width: 6rem;
-    height: 6rem;
+    height: auto;
     filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+
+    @media (max-width: $breakpoint-sm) {
+        width: 4rem;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+        width: 3rem;
+    }
 }
 
 .quiz__themes-button {
@@ -35,6 +43,10 @@
     @media (max-width: $breakpoint-sm) {
         width: 100%;
     }
+
+    @media (max-width: $breakpoint-xxs) {
+        padding: 0.6rem;
+    }
 }
 
 .quiz__themes-button-main {
@@ -47,4 +59,12 @@
     text-overflow: ellipsis;
     //text-overflow: ellipsis;
     //white-space: nowrap;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+        font-size: 1rem;
+    }
 }

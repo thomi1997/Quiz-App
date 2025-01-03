@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(231, 130, 48);
+    background-color: $color-orange;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.250rem rgba(0, 0, 0, 0.5);
     margin: 0 0 1.4rem 0;
@@ -16,7 +16,7 @@
         content: "";
         width: 1px;
         height: 2.5rem;
-        background-color: rgb(237, 250, 255);
+        background-color: $color-white;
         position: absolute;
         left: 50%;
     }
@@ -33,14 +33,30 @@
 .quiz__count-ranking-main {
     font-size: 1rem;
     font-weight: 100;
-    color: rgb(237, 250, 255);
+    color: $color-white;
     font-family: 'Roboto', sans-serif;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+        font-size: 0.6rem;
+    }
 }
 
 .quiz__count-counter-number,
 .quiz__count-ranking-number {
     font-size: 2rem;
     font-weight: 600;
-    color: rgb(237, 250, 255);
+    color: $color-white;
     font-family: 'Roboto', sans-serif;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+        font-size: 1rem;
+    }
 }
