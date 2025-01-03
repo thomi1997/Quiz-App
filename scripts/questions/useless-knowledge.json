@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Unnützes Wissen",
+        "question": "Welche Farbe haben Eisbären unter ihrem Fell?",
+        "answer_1": "Weiß",
+        "answer_2": "Braun",
+        "answer_3": "Schwarz",
+        "answer_4": "Blau",
+        "right_answer": 3
+    },
+    {
+        "question": "Was passiert, wenn man Gummibärchen ins Wasser wirft?",
+        "answer_1": "Sie schwimmen",
+        "answer_2": "Sie quellen auf",
+        "answer_3": "Sie lösen sich auf",
+        "answer_4": "Sie verschwinden",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie lange dauert ein Wimpernschlag?",
+        "answer_1": "2 Sekunden",
+        "answer_2": "1 Minute",
+        "answer_3": "0,1 Sekunden",
+        "answer_4": "Eine Stunde",
+        "right_answer": 3
+    },
+    {
+        "question": "Wie viele Herzen hat ein Regenwurm?",
+        "answer_1": "1",
+        "answer_2": "5",
+        "answer_3": "10",
+        "answer_4": "Keins",
+        "right_answer": 2
+    },
+    {
+        "question": "Woran erkennt man ein männliches Seepferdchen?",
+        "answer_1": "Es bekommt Babys",
+        "answer_2": "Es singt laut",
+        "answer_3": "Es fliegt",
+        "answer_4": "Es trägt einen Hut",
+        "right_answer": 1
+    },
+    {
+        "question": "Welcher Buchstabe fehlt auf einer Schweizer Tastatur?",
+        "answer_1": "Q",
+        "answer_2": "Z",
+        "answer_3": "Es fehlen keine",
+        "answer_4": "X",
+        "right_answer": 3
+    },
+    {
+        "question": "Was passiert, wenn man im Weltall weint?",
+        "answer_1": "Die Tränen fliegen weg",
+        "answer_2": "Die Tränen bleiben am Auge kleben",
+        "answer_3": "Es regnet",
+        "answer_4": "Nichts",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie heißt die Hauptstadt von Australien?",
+        "answer_1": "Sydney",
+        "answer_2": "Melbourne",
+        "answer_3": "Canberra",
+        "answer_4": "Brisbane",
+        "right_answer": 3
+    },
+    {
+        "question": "Was wurde zuerst erfunden: Tee oder Kaffee?",
+        "answer_1": "Kaffee",
+        "answer_2": "Tee",
+        "answer_3": "Beide gleichzeitig",
+        "answer_4": "Kakao",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie lange dauert ein Tag auf dem Mars?",
+        "answer_1": "48 Stunden",
+        "answer_2": "12 Stunden",
+        "answer_3": "24,6 Stunden",
+        "answer_4": "Eine Woche",
+        "right_answer": 3
+    }
+]

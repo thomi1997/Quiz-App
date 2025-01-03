@@ -17,6 +17,7 @@ function renderQuiz() {
             Quiz beendet!
         </div>
         <div class="">
+            <img src="" id="header-image">
             Du hast <b id="amount-of-right-questions">xxx</b> Fragen von <b id="amount-of-questions">xxx</b> richtig beantwortet.
         </div>
         <div class="">

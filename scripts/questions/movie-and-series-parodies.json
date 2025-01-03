@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Film und Serienparodien",
+        "question": "Wie heißt der Zauberer aus „Dumbledore und die 7 Teekannen“?",
+        "answer_1": "Albinus",
+        "answer_2": "Dummeldumm",
+        "answer_3": "Dumbledore ",
+        "answer_4": "Teekannikus",
+        "right_answer": 3
+    },
+    {
+        "question": "Was würde Batman ohne Strom machen?",
+        "answer_1": "Fliegen",
+        "answer_2": "Zu Fuß gehen",
+        "answer_3": "Eine Taschenlampe benutzen ",
+        "answer_4": "Nie wieder Verbrechen lösen",
+        "right_answer": 2
+    },
+    {
+        "question": "Was war das Ziel in „Fluch der Kaffeekanne“?",
+        "answer_1": "Kaffee kochen",
+        "answer_2": "Piratenschiffe lieben",
+        "answer_3": "Die perfekte Tasse finden",
+        "answer_4": "Einen Keks stehlen",
+        "right_answer": 3
+    },
+    {
+        "question": "Wie heißt der bekannteste Jedi-Ritter?",
+        "answer_1": "Joda",
+        "answer_2": "Yoda",
+        "answer_3": "Soda",
+        "answer_4": "Loda",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn Hulk müde ist?",
+        "answer_1": "Er schläft ein",
+        "answer_2": "Er wird blau",
+        "answer_3": "Er explodiert",
+        "answer_4": "Er singt",
+        "right_answer": 1
+    },
+    {
+        "question": "Was isst Garfield am liebsten?",
+        "answer_1": "Suppe",
+        "answer_2": "Lasagne ",
+        "answer_3": "Kekse",
+        "answer_4": "Pizza",
+        "right_answer": 2
+    },
+    {
+        "question": "Welches Tier spielt die Hauptrolle in „Findet Käse“?",
+        "answer_1": "Elefant",
+        "answer_2": "Maus",
+        "answer_3": "Katze",
+        "answer_4": "Fisch",
+        "right_answer": 2
+    },
+    {
+        "question": "Wen ruft man, wenn man ein Geistproblem hat?",
+        "answer_1": "Polizei",
+        "answer_2": "Ghostbusters",
+        "answer_3": "Papa",
+        "answer_4": "Feuerwehr",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist der häufigste Satz in Horrorfilmen?",
+        "answer_1": "Ich bleibe hier!",
+        "answer_2": "Das ist sicher nur der Wind.",
+        "answer_3": "Wir sollten uns aufteilen.",
+        "answer_4": "Das ist ein Traum.",
+        "right_answer": 3
+    },
+    {
+        "question": "Was hat Shrek gerne?",
+        "answer_1": "Drachen",
+        "answer_2": "Zwiebeln",
+        "answer_3": "Äpfel",
+        "answer_4": "Joghurt",
+        "right_answer": 2
+    }
+]

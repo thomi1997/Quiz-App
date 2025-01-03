@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Merkwürdige Erfindungen",
+        "question": "Was ist der Selfie-Toaster?",
+        "answer_1": "Ein Toaster, der Selfies macht",
+        "answer_2": "Ein Toaster, der dein Gesicht aufs Toast druckt",
+        "answer_3": "Ein Toaster mit Kamera",
+        "answer_4": "Ein Toaster, der Bilder isst",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist ein Schrumpel-Bügel?",
+        "answer_1": "Ein Bügeleisen, das Kleidung schrumpft",
+        "answer_2": "Ein Gerät für Schrumpfköpfe",
+        "answer_3": "Eine Erfindung für Faltencreme",
+        "answer_4": "Ein Selfie-Stick",
+        "right_answer": 3
+    },
+    {
+        "question": "Warum gibt es eine Pizza-Schere?",
+        "answer_1": "Für Kunstprojekte",
+        "answer_2": "Zum Pizzaschneiden und Servieren",
+        "answer_3": "Für Origami",
+        "answer_4": "Für Haarschnitte",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie funktioniert eine Spaghetti-Gabel mit Motor?",
+        "answer_1": "Sie dreht sich von selbst",
+        "answer_2": "Sie rollt Spaghetti automatisch auf",
+        "answer_3": "Sie macht Musik",
+        "answer_4": "Sie fährt wie ein Auto",
+        "right_answer": 1
+    },
+    {
+        "question": "Wofür wurde der Regenschirmhut erfunden?",
+        "answer_1": "Für Hunde",
+        "answer_2": "Um Hände freizuhalten",
+        "answer_3": "Für Modenschauen",
+        "answer_4": "Für Elefanten",
+        "right_answer": 2
+    },
+    {
+        "question": "Warum gibt es Schuhe mit Staubsaugern?",
+        "answer_1": "Für Tänzer",
+        "answer_2": "Zum Putzen beim Gehen",
+        "answer_3": "Für Marsmissionen",
+        "answer_4": "Zum Fliegen",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist ein Nasenkissen?",
+        "answer_1": "Ein Kissen speziell für die Nase",
+        "answer_2": "Ein Mini-Schlafsack",
+        "answer_3": "Ein Witzartikel",
+        "answer_4": "Ein Duftspender",
+        "right_answer": 1
+    },
+    {
+        "question": "Wie funktioniert ein Kuschelroboter?",
+        "answer_1": "Er gibt dir Geld",
+        "answer_2": "Er umarmt dich",
+        "answer_3": "Er putzt das Haus",
+        "answer_4": "Er singt",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist eine Pizzagabel?",
+        "answer_1": "Ein Gabelmesser",
+        "answer_2": "Eine Gabel mit integriertem Pizzaschneider",
+        "answer_3": "Ein Gerät für Pizzajongleure",
+        "answer_4": "Ein italienisches Kunstwerk",
+        "right_answer": 2
+    },
+    {
+        "question": "Warum wurde der Wecker mit Rädern erfunden?",
+        "answer_1": "Damit man ihn nicht so leicht ausschalten kann",
+        "answer_2": "Zum Staubsaugen",
+        "answer_3": "Für Rennen",
+        "answer_4": "Um Möbel zu bewegen",
+        "right_answer": 1
+    }
+]

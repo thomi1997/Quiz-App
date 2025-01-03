@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Unerwartete Fakten über Berühmtheiten",
+        "question": "Welches Instrument spielt Keanu Reeves?",
+        "answer_1": "Flöte",
+        "answer_2": "Bassgitarre",
+        "answer_3": "Trompete",
+        "answer_4": "Klavier",
+        "right_answer": 2
+    },
+    {
+        "question": "Welcher Schauspieler hat Angst vor Clowns?",
+        "answer_1": "Brad Pitt",
+        "answer_2": "Johnny Depp",
+        "answer_3": "Daniel Radcliffe",
+        "answer_4": "Robert Downey Jr.",
+        "right_answer": 3
+    },
+    {
+        "question": "Wer hat aus Versehen ein echtes Pferd in einem Film geritten?",
+        "answer_1": "Viggo Mortensen",
+        "answer_2": "Chris Hemsworth",
+        
+        "answer_3": "Orlando Bloom",
+        "answer_4": "Tom Cruise",
+        "right_answer": 1
+    },
+    {
+        "question": "Welche Berühmtheit hat ein Bett aus 24-Karat-Gold?",
+        "answer_1": "Lady Gaga",
+        "answer_2": "Beyoncé",
+        "answer_3": "Elon Musk",
+        "answer_4": "Kanye West",
+        "right_answer": 4
+    },
+    {
+        "question": "Was hat Arnold Schwarzenegger als erstes gekauft, als er reich wurde?",
+        "answer_1": "Ein Haus",
+        "answer_2": "Ein Panzer",
+        "answer_3": "Ein Flugzeug",
+        "answer_4": "Eine Pizzeria",
+        "right_answer": 2
+    },
+    {
+        "question": "Wer hat ein eigenes Patent für ein Produkt angemeldet?",
+        "answer_1": "Michael Jackson (für seine Anti-Schwerkraft-Schuhe)",
+        "answer_2": "Tom Hanks",
+        "answer_3": "Scarlett Johansson",
+        "answer_4": "Dwayne Johnson",
+        "right_answer": 1
+    },
+    {
+        "question": "Welche Berühmtheit besitzt eine riesige Sammlung von Barbies?",
+        "answer_1": "Johnny Depp",
+        "answer_2": "Angelina Jolie",
+        "answer_3": "Taylor Swift",
+        "answer_4": "Brad Pitt",
+        "right_answer": 1
+    },
+    {
+        "question": "Welche Berühmtheit hat in jungen Jahren Honigbienen gezüchtet?",
+        "answer_1": "Leonardo DiCaprio",
+        "answer_2": "Morgan Freeman",
+        "answer_3": "Chris Evans",
+        "answer_4": "Keira Knightley",
+        "right_answer": 2
+    },
+    {
+        "question": "Wer hat einmal versucht, eine Insel zu kaufen?",
+        "answer_1": "Beyoncé",
+        "answer_2": "Justin Bieber",
+        "answer_3": "Oprah Winfrey",
+        "answer_4": "Leonardo DiCaprio",
+        "right_answer": 4
+    },
+    {
+        "question": "Welche Berühmtheit besitzt einen Stern am Himmel, der nach ihr benannt wurde?",
+        "answer_1": "Rihanna",
+        "answer_2": "Taylor Swift",
+        "answer_3": "Will Smith",
+        "answer_4": "George Clooney",
+        "right_answer": 2
+    }
+]

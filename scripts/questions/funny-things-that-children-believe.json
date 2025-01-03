@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Lustige Dinge, die Kinder glauben",
+        "question": "Was glauben manche Kinder, woher der Regen kommt?",
+        "answer_1": "Der Himmel weint",
+        "answer_2": "Engel gießen Blumen",
+        "answer_3": "Ein Flugzeug hat Wasser verschüttet",
+        "answer_4": "Wolken schwitzen",
+        "right_answer": 2
+    },
+    {
+        "question": "Warum denken Kinder, dass der Mond ihnen folgt?",
+        "answer_1": "Der Mond mag sie",
+        "answer_2": "Er sieht immer gleich aus",
+        "answer_3": "Der Mond hat ein Auto",
+        "answer_4": "Er wohnt in ihrem Haus",
+        "right_answer": 2
+    },
+    {
+        "question": "Was glauben Kinder, wie Babys entstehen?",
+        "answer_1": "Aus einem Zaubertrick",
+        "answer_2": "Sie wachsen in einem Baum",
+        "answer_3": "Der Storch bringt sie",
+        "answer_4": "Sie entstehen aus Luftballons",
+        "right_answer": 3
+    },
+    {
+        "question": "Was denken Kinder über Fernsehschauspieler?",
+        "answer_1": "Sie wohnen im Fernseher",
+        "answer_2": "Sie sind echte Zauberer",
+        "answer_3": "Sie sehen alles, was man tut",
+        "answer_4": "Sie sind Puppen",
+        "right_answer": 3
+    },
+    {
+        "question": "Warum denken Kinder, dass Erwachsene nie müde sind?",
+        "answer_1": "Erwachsene schlafen nie",
+        "answer_2": "Erwachsene trinken magischen Kaffee",
+        "answer_3": "Erwachsene haben Geheimtricks",
+        "answer_4": "Sie haben bessere Betten",
+        "right_answer": 2
+    },
+    {
+        "question": "Was glauben Kinder über Ampeln?",
+        "answer_1": "Sie schalten sich selbst um",
+        "answer_2": "Da sitzt ein Mann, der die Farben wechselt",
+        "answer_3": "Es ist ein Zaubertrick",
+        "answer_4": "Sie sind kaputt",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie denken Kinder, dass das Internet funktioniert?",
+        "answer_1": "Durch Magie",
+        "answer_2": "Kleine Leute im Computer schreiben alles",
+        "answer_3": "Es sind überall unsichtbare Kabel",
+        "answer_4": "Es kommt aus dem Kühlschrank",
+        "right_answer": 3
+    },
+    {
+        "question": "Was glauben Kinder, wie Wolken entstehen?",
+        "answer_1": "Dampfschiffe im Himmel",
+        "answer_2": "Drachen pusten sie",
+        "answer_3": "Flugzeuge malen sie",
+        "answer_4": "Sie wachsen aus Sternen",
+        "right_answer": 1
+    },
+    {
+        "question": "Warum denken Kinder, dass Geld unendlich ist?",
+        "answer_1": "Weil man es einfach am Automaten holt",
+        "answer_2": "Geld wächst auf Bäumen",
+        "answer_3": "Erwachsene drucken es zuhause",
+        "answer_4": "Es kommt aus Schokofabriken",
+        "right_answer": 1
+    },
+    {
+        "question": "Was glauben Kinder, woher Strom kommt?",
+        "answer_1": "Von Elektrikern, die auf Fahrrädern treten",
+        "answer_2": "Von Hamstern in Laufrädern",
+        "answer_3": "Von Sternschnuppen",
+        "answer_4": "Von Vulkanen",
+        "right_answer": 2
+    }
+]

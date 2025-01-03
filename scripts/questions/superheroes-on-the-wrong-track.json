@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Superhelden auf Abwegen",
+        "question": "Was macht Superman, wenn er seine Brille verliert?",
+        "answer_1": "Er fliegt blind herum",
+        "answer_2": "Er kauft eine neue",
+        "answer_3": "Er leiht sich Batmans Maske",
+        "answer_4": "Er benutzt ein Fernglas",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist Batmans größte Angst?",
+        "answer_1": "Dunkelheit",
+        "answer_2": "Fledermäuse",
+        "answer_3": "Katzen",
+        "answer_4": "Sein Butler kündigt",
+        "right_answer": 2
+    },
+    {
+        "question": "Was würde Spider-Man ohne Spinnenfäden machen?",
+        "answer_1": "Laufen",
+        "answer_2": "Fahrrad fahren",
+        "answer_3": "Von Dach zu Dach hüpfen",
+        "answer_4": "Taxi nehmen",
+        "right_answer": 3
+    },
+    {
+        "question": "Was passiert, wenn Hulk zu viel Spinat isst?",
+        "answer_1": "Er wird Popeye",
+        "answer_2": "Er wird noch stärker",
+        "answer_3": "Er wird grün und gelb",
+        "answer_4": "Er explodiert",
+        "right_answer": 2
+    },
+    {
+        "question": "Was trägt Thor in der Freizeit?",
+        "answer_1": "Rüstung",
+        "answer_2": "Jogginghose",
+        "answer_3": "Sein Hammer als Halskette",
+        "answer_4": "Wikingerhelm",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist Iron Mans schwächster Punkt?",
+        "answer_1": "Sein Anzug",
+        "answer_2": "Sein Akku",
+        "answer_3": "Seine Frisur",
+        "answer_4": "Magneten",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn Captain America seinen Schild verliert?",
+        "answer_1": "Er weint",
+        "answer_2": "Er nimmt den Mülleimerdeckel",
+        "answer_3": "Er läuft weg",
+        "answer_4": "Er ruft Thor an",
+        "right_answer": 2
+    },
+    {
+        "question": "Wen ruft Wonder Woman bei Problemen?",
+        "answer_1": "Batman",
+        "answer_2": "Ihre Mutter",
+        "answer_3": "Sich selbst, sie braucht niemanden",
+        "answer_4": "Aquaman",
+        "right_answer": 3
+    },
+    {
+        "question": "Warum ist Deadpool so lustig?",
+        "answer_1": "Er redet ununterbrochen",
+        "answer_2": "Er hat eine Clownschule besucht",
+        "answer_3": "Sein Anzug kitzelt",
+        "answer_4": "Er ist ein Stand-up-Comedian",
+        "right_answer": 1
+    },
+    {
+        "question": "Welchen Job würde der Flash machen?",
+        "answer_1": "Pilot",
+        "answer_2": "Pizzabote ",
+        "answer_3": "Astronaut",
+        "answer_4": "Lehrer",
+        "right_answer": 2
+    }
+]

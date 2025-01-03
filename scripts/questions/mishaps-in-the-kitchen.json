@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Missgeschicke in der Küche",
+        "question": "Was passiert, wenn man Nudeln zu lange kocht?",
+        "answer_1": "Sie explodieren",
+        "answer_2": "Sie werden matschig",
+        "answer_3": "Sie wachsen zu Monstern",
+        "answer_4": "Sie lösen sich auf",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie kann man verbrannten Toast retten?",
+        "answer_1": "Mit Wasser abspülen",
+        "answer_2": "Abkratzen mit dem Messer",
+        "answer_3": "Mit Marmelade überdecken",
+        "answer_4": "Nicht, er bleibt verbrannt",
+        "right_answer": 2
+    },
+    {
+        "question": "Was sollte man nicht in die Mikrowelle stecken?",
+        "answer_1": "Pizza",
+        "answer_2": "Alufolie",
+        "answer_3": "Wasser",
+        "answer_4": "Gemüse",
+        "right_answer": 2
+    },
+    {
+        "question": "Wie kann man weinen beim Zwiebelschneiden vermeiden?",
+        "answer_1": "Sonnenbrille tragen",
+        "answer_2": "Die Zwiebel anschreien",
+        "answer_3": "Unter Wasser schneiden",
+        "answer_4": "Einen Ventilator benutzen",
+        "right_answer": 3
+    },
+    {
+        "question": "Was passiert, wenn man Eier zu lange kocht?",
+        "answer_1": "Sie verschwinden",
+        "answer_2": "Sie bekommen eine grüne Schale",
+        "answer_3": "Sie schmelzen",
+        "answer_4": "Sie werden zu Gold",
+        "right_answer": 2
+    },
+    {
+        "question": "Warum sollte man kein Salz ins Dessert tun?",
+        "answer_1": "Es explodiert",
+        "answer_2": "Es schmeckt dann komisch",
+        "answer_3": "Man wird dafür verhaftet",
+        "answer_4": "Es verwandelt sich in Suppe",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn man den Backofen vergisst auszuschalten?",
+        "answer_1": "Er schmilzt",
+        "answer_2": "Die Stromrechnung wird hoch",
+        "answer_3": "Der Kuchen backt sich weiter",
+        "answer_4": "Er wird zu einem Kühlschrank",
+        "right_answer": 2
+    },
+    {
+        "question": "Was passiert, wenn man das Rezept nicht liest?",
+        "answer_1": "Man macht Fehler",
+        "answer_2": "Der Kuchen kommt perfekt raus",
+        "answer_3": "Das Essen singt",
+        "answer_4": "Das Rezept weint",
+        "right_answer": 1
+    },
+    {
+        "question": "Warum sollte man Öl nicht mit Wasser löschen?",
+        "answer_1": "Es sieht nicht gut aus",
+        "answer_2": "Es explodiert",
+        "answer_3": "Es wird kalt",
+        "answer_4": "Die Küche wird sauber",
+        "right_answer": 2
+    },
+    {
+        "question": "Was ist das wichtigste Gerät in der Küche?",
+        "answer_1": "Der Toaster",
+        "answer_2": "Der Kühlschrank",
+        "answer_3": "Das Messer",
+        "answer_4": "Der Mixer",
+        "right_answer": 3
+    }
+]
