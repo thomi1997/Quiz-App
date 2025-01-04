@@ -1,3 +1,5 @@
+let currentPercent = 0;
+
 function showQuestion() {
     if (gameIsOver()) {
         updateProgressBar();
@@ -15,11 +17,14 @@ function gameIsOver() {
 
 
 function showEndScreen() {
-    document.getElementById('end-screen').style = '';
-    document.getElementById('question-body').style = 'display: none';
-    document.getElementById('amount-of-questions').innerHTML = questions.length;
-    document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
-    document.getElementById('header-image').src = 'img/win.png';
+    quizId.innerHTML = '';
+    headerNav.classList.add('d-none');
+    quizId.innerHTML = renderWinEndScreen(currentPercent);
+    /*document.getElementById('end-screen').style = '';
+    document.getElementById('question-body').style = 'display: none';*/
+    document.getElementById('amount-of-questions').innerHTML = `${questions.length} Fragen`;
+    document.getElementById('amount-of-right-questions').innerHTML = `${rightQuestions} Fragen`;
+    //document.getElementById('header-image').src = 'img/win.png';
 }
 
 function updateToNextQuestion() {
@@ -38,6 +43,7 @@ function updateToNextQuestion() {
 function updateProgressBar() {
     let percent = (currentQuestion) / questions.length;
     percent = Math.round(percent * 100);
+    currentPercent = percent;
     document.getElementById('progress-bar-number').innerHTML = `${percent} %`;
     document.getElementById('progress-bar-id').style.width = `${percent}%`;
 }
@@ -49,27 +55,30 @@ function answer(selection) {
     let idOfRightAnswer = `answer_${question['right_answer']}`;
     ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer);
     document.getElementById('next-button').disabled = false;
+    document.getElementById('next-button').style="opacity: 1;";
+    document.getElementById('next-button').classList.add('quiz__card-next-btn-hover');
 }
 
 
 function ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer) {
     if (selectedQuestionNumber == question['right_answer']) {
-        answerTrue(selection);
+        answerTrue(selection, idOfRightAnswer);
+        disableAnswers();
     } else {
         answerFalse(selection, idOfRightAnswer);
+        disableAnswers();
     }
 }
 
 
-function answerTrue(selection) {
+function answerTrue(selection, idOfRightAnswer) {
     document.getElementById(selection).parentNode.classList.add('color-bright-grey');
     const answerElement = document.getElementById(selection);
     const parentElement = answerElement.closest('.quiz__card-answers');
     const parentId = parentElement.id;
     document.getElementById(`letter-icon-${parentId}`).classList.add('move-icon');
     document.getElementById(`icon-bg-${parentId}`).style="background-color: rgb(204, 219, 232)";
-
-    disableAnswers();
+    getParentTrueId(idOfRightAnswer)
     //audio_success.play();
     rightQuestions++;
 }
@@ -80,7 +89,6 @@ function answerFalse(selection, idOfRightAnswer) {
     document.getElementById(idOfRightAnswer).parentNode.classList.add('color-bright-grey');
     getParentTrueId(idOfRightAnswer);
     getParentFalseId(selection);
-    disableAnswers();
     //audio_fail.play();
 }
 
@@ -125,6 +133,8 @@ function disableAnswers() {
 function nextQuestion() {
     currentQuestion++;
     document.getElementById('next-button').disabled = true;
+    document.getElementById('next-button').style="opacity: 0.8;";
+    document.getElementById('next-button').classList.remove('quiz__card-next-btn-hover');
     resetAnswerStructure();
     resetAnswerButtons();
     showQuestion();
@@ -140,7 +150,10 @@ function resetAnswerStructure() {
     document.getElementById('icon-bg-b').style="background-color: rgb(231, 130, 48)";
     document.getElementById('icon-bg-c').style="background-color: rgb(231, 130, 48)";
     document.getElementById('icon-bg-d').style="background-color: rgb(231, 130, 48)";
-    
+    document.getElementById('icon-a').src="../img/letter-A.png";
+    document.getElementById('icon-b').src="../img/letter-B.png";
+    document.getElementById('icon-c').src="../img/letter-C.png";
+    document.getElementById('icon-d').src="../img/letter-D.png";
 }
 
 
@@ -152,18 +165,11 @@ function resetAnswerButtons() {
 }
 
 
-function restartGame() {
-    document.getElementById('header-image').src = 'img/question.jpg';
-    document.getElementById('question-body').style = '';
-    document.getElementById('end-screen').style = 'display: none';
-    rightQuestions = 0;
-    currentQuestion = 0;
-    init();
-}
-
-
 function closeInGame() {
     quizId.innerHTML = '';
     headerNav.innerHTML = '';
+    headerNav.classList.remove('d-none');
+    rightQuestions = 0;
+    currentQuestion = 0;
     init();
 }

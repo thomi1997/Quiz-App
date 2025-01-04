@@ -1,6 +1,7 @@
 let questions = [];
 let rightQuestions = 0;
 let currentQuestion = 0;
+let rankingPoints = 0;
 
 
 let audio_success = new Audio('audio/success.mp3');

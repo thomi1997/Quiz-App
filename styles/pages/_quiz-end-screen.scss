@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+%quiz__card-end-text {
+    color: $color-black;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+
+.quiz__card-end {
+    background-color: $color-bright-grey;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &--img {
+        height: 20rem;
+        width: auto;
+
+        @media (max-width: $breakpoint-xs) {
+            height: 10rem;
+        }
+    }
+
+    &--title {
+        @extend %quiz__card-end-text;
+        font-size: 2rem;
+        font-family: 'Roboto-Bold', sans-serif;
+        margin-top: 0.8rem;
+
+        @media (max-width: $breakpoint-xs) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &--score {
+        font-size: 3rem;
+        color: rgb(45, 176, 116);
+        font-family: 'Mogra', sans-serif;
+        text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+        margin: 0.5rem 0;
+
+        @media (max-width: $breakpoint-xs) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &--main {
+        @extend %quiz__card-end-text;
+        font-size: 1.2rem;
+        font-family: 'Roboto-Bold', sans-serif;
+        margin-bottom: 0.8rem;
+
+        @media (max-width: $breakpoint-xs) {
+            font-size: 1rem;
+        }
+    }
+
+    &--description {
+        @extend %quiz__card-end-text;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: 'Roboto-Light', sans-serif;
+
+        @media (max-width: $breakpoint-xs) {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.quiz__card-end-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+
+    &:hover {
+        transition: transform 300ms ease-in-out;
+        transform: scale(1.1);
+    }
+}
+
+.quiz__card-end-true-quest {
+    color: rgb(45, 176, 116);
+}
+
+.quiz__card-end-all-quest {
+    color: rgb(34, 112, 167);
+}

@@ -4,6 +4,12 @@
     width: 90%;
 }
 
+%quiz-card-text {
+    color: $color-white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+
 .quiz__card-data {
     display: flex;
     justify-content: space-between;
@@ -12,15 +18,21 @@
 }
 
 .quiz__card-data-question-number {
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
+    @extend %quiz-card-text;
     font-size: $font-size-quiz-form;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
 }
 
 .quiz__card-data-time {
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
+    @extend %quiz-card-text;
     font-size: $font-size-quiz-form;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
 }
 
 .quiz__card-progress {
@@ -41,34 +53,54 @@
 .quiz__card-progress-bar-number {
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
+    color: $color-black;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
     position: absolute;
     left: calc(50% - 1.2rem);
     top: 0.3rem;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1rem;
+        top: 0.4rem;
+        left: calc(50% - 1rem);
+    }
 }
 
-.quiz__card-body {}
+.quiz__card-body {
+    display: flex;
+    flex-direction: column;
+}
 
 .quiz__card-question {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .quiz__card-question-number {
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
+    @extend %quiz-card-text;
     font-size: $font-size-quiz-form;
+    align-self: flex-start;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
 }
 
 .quiz__card-question-main {
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
+    @extend %quiz-card-text;
     font-size: $font-size-quiz-form;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
 }
 
 .quiz__card-answers {
     color: $color-black;
     background-color: rgb(204, 219, 232);
-    margin: 2rem 0;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+    margin: 1.6rem 0;
     height: 4rem;
     border-radius: 99rem;
     cursor: pointer;
@@ -82,56 +114,99 @@
         position: absolute;
         left: 0;
         z-index: 1;
-        transition: width 1s ease-in-out;
+        opacity: 0;
     }
 
     &--letter-icon {
-        height: 2rem;
+        height: 1.8rem;
         width: auto;
-        z-index: 1;
+    }
+
+    &--true-false-icon {
+        height: 1.8rem;
+        width: auto;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        margin: 1rem 0;
     }
 }
 
-.quiz__card-answers-icon-bg {
-    height: 4rem;
-    width: 4rem;
+%card-answers-icon-frame {
+    height: 3rem;
+    width: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: circle(40%);
-}
-
-.move-icon {
-    transition: width 2s ease-in-out;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.5rem;
+    z-index: 1;
     background-color: $color-orange;
 }
 
-.color-bright-grey {
-    color: $color-bright-grey !important;
+.quiz__card-answers-letter-frame {
+    @extend %card-answers-icon-frame;
+    left: 0.5rem;
 }
 
-.bg-success {
-    color: green !important;
-}
-
-.bg-danger {
-    
+.quiz__card-answers-icon-bg {
+    @extend %card-answers-icon-frame;
+    right: 0.5rem;
 }
 
 .quiz__card-answers-main {
     font-size: $font-size-quiz-form;
     font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 6rem;
     top: calc(50% - 1rem);
     z-index: 1;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+        left: 5rem;
+        top: calc(50% - 0.8rem);
+    }
+}
+
+.move-icon {
+    transition: width 1s ease-in-out, opacity 1s ease-out;
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $color-orange;
 }
 
 .quiz__card-next-btn {
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    @extend %quiz-card-text;
     font-size: $font-size-quiz-form;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+    background-color: $color-orange;
+    border-radius: 1rem;
+    padding: 0.8rem 0;
+    border: none;
+    transition: opacity 800ms ease;
+    opacity: 0.8;
+    margin: 1.2rem 0;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
+}
+
+
+.quiz__card-next-btn-hover {
+    &:hover {
+        transition: filter 800ms ease;
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+}
+
+.color-bright-grey {
+    color: $color-bright-grey !important;
 }

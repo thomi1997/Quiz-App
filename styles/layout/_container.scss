@@ -13,7 +13,26 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $breakpoint-lg) {
+        height: auto;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        height: auto;
+        padding: 8rem 0 0 0;
+    }
+
     @media (max-width: $breakpoint-sm) {
+        height: auto;
+        padding: 7rem 0 0 0;
+    }
+
+    //height
+    @media (min-height: $breakpoint-sm) {
+        height: 100vh;
+    }
+
+    @media (max-height: $breakpoint-sm) {
         height: 100%;
     }
 }
