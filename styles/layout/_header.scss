@@ -63,8 +63,9 @@
 }
 
 .header__main {
-    font-size: 3rem;
     @extend %header__main-menu-game;
+    font-size: 3rem;
+    cursor: pointer;
 
     @media (max-width: $breakpoint-sm) {
         font-size: 1.4rem;

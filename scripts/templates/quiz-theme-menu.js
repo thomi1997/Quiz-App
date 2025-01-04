@@ -1,13 +1,13 @@
-function renderQuizThemeMenu() {
+function renderQuizThemeMenu(completedQuestions, rankingPoints) {
     return /*html*/ `
 <div class="quiz__count">
     <div class="quiz__count-counter">
         <p class="quiz__count-counter-main">Question Count</p>
-        <span class="quiz__count-counter-number">456</span>
+        <span class="quiz__count-counter-number">${completedQuestions}</span>
     </div>
     <div class="quiz__count-ranking">
         <p class="quiz__count-ranking-main">Your Ranking</p>
-        <span class="quiz__count-ranking-number">456</span>
+        <span class="quiz__count-ranking-number">${rankingPoints}</span>
     </div>
 </div>
 <div class="quiz__themes">

@@ -1,4 +1,5 @@
 let currentPercent = 0;
+let currentPoints = 0;
 
 function showQuestion() {
     if (gameIsOver()) {
@@ -63,6 +64,7 @@ function answer(selection) {
 function ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer) {
     if (selectedQuestionNumber == question['right_answer']) {
         answerTrue(selection, idOfRightAnswer);
+        currentPoints = currentPoints + 10;
         disableAnswers();
     } else {
         answerFalse(selection, idOfRightAnswer);
@@ -132,6 +134,7 @@ function disableAnswers() {
 
 function nextQuestion() {
     currentQuestion++;
+    console.log('current points', currentPoints);
     document.getElementById('next-button').disabled = true;
     document.getElementById('next-button').style="opacity: 0.8;";
     document.getElementById('next-button').classList.remove('quiz__card-next-btn-hover');
@@ -166,10 +169,24 @@ function resetAnswerButtons() {
 
 
 function closeInGame() {
+    let points = rankingPoints[0] + currentPoints;
+    rankingPoints.push(points);
+    rankingPoints.splice(0, 1);
+
+    let questions = completedQuestions + currentQuestion;
+    completedQuestions.push(questions);
+    completedQuestions.splice(0, 1);
+
+    let rankingPointsAsText = JSON.stringify(rankingPoints);
+    localStorage.setItem('ranking' , rankingPointsAsText);
+    let completedQuestionsAsText = JSON.stringify(completedQuestions);
+    localStorage.setItem('questions' , completedQuestionsAsText);
+
     quizId.innerHTML = '';
     headerNav.innerHTML = '';
     headerNav.classList.remove('d-none');
     rightQuestions = 0;
     currentQuestion = 0;
+    currentPoints = 0;
     init();
 }

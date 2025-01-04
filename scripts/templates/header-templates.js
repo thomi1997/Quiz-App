@@ -1,12 +1,12 @@
-function renderHeaderThemes() {
+function renderHeaderThemes(playerProfile) {
     return /*html*/ `
 <div class="header--menu">
     <div class="header__menu-icon">
         <img class="header__menu-img" src="../../img/burger-menu.png">
     </div>
-    <h1 class="header__main">Quiz App</h1>
-    <div class="header__user">
-        <img class="header__user-img" src="../../img/user.png">
+    <h1 onclick="init()" class="header__main">Quiz App</h1>
+    <div onclick="initPlayerConfig()" class="header__user">
+        <img class="header__user-img" src="../../img/players/${playerProfile}.png">
     </div>
 </div>
 `;

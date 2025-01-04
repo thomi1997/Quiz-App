@@ -1,7 +1,6 @@
 let questions = [];
 let rightQuestions = 0;
 let currentQuestion = 0;
-let rankingPoints = 0;
 
 
 let audio_success = new Audio('audio/success.mp3');
@@ -25,18 +24,29 @@ let urlFunnyThingsThatChildrenBelieve = './scripts/questions/funny-things-that-c
 
 
 function init() {
-    quizId.innerHTML = renderQuizThemeMenu();
-    headerNav.innerHTML = renderHeaderThemes();
+    loadPlayer();
+    if (playerName.length === 0) {
+        let playerUnknow = 'player-unknown';
+        headerNav.innerHTML = renderHeaderThemes(playerUnknow);
+        quizId.innerHTML = renderQuizThemeMenu(0, 0);
+    } else if (playerName) {
+        headerNav.innerHTML = renderHeaderThemes(playerProfile);
+        quizId.innerHTML = renderQuizThemeMenu(completedQuestions, rankingPoints);
+    }
     headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
 }
 
 
 async function startQuiz(element) {
-    let id = element.id;
-    await whichQuizTheme(id);
-    headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
-    document.getElementById('all-questions').innerHTML = questions.length;
-    showQuestion();
+    if (playerName.length > 0) {
+        let id = element.id;
+        await whichQuizTheme(id);
+        headerNav.style='border-bottom-right-radius: 0rem; border-bottom-left-radius: 0rem';
+        document.getElementById('all-questions').innerHTML = questions.length;
+        showQuestion();
+    } else {
+        alert("Füge bitte einen Player hinzu!");
+    }
 }
 
 
