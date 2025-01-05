@@ -6,7 +6,7 @@ function renderQuiz() {
             <b id="question-number-1"></b> von <b id="all-questions"></b> Fragen
         </span>
         <span class="quiz__card-data-time">
-            <b id="quiz-time">03:00</b> min
+            <b id="quiz-time"></b> min
         </span>
     </div>
     <div class="quiz__card-progress">

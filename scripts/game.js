@@ -1,8 +1,9 @@
 let currentPercent = 0;
 let currentPoints = 0;
 
+
 function showQuestion() {
-    if (gameIsOver()) {
+    if (quizCompleted()) {
         updateProgressBar();
         showEndScreen();
     } else {
@@ -12,8 +13,14 @@ function showQuestion() {
 }
 
 
-function gameIsOver() {
+function quizCompleted() {
     return currentQuestion >= questions.length;
+}
+
+
+function showGameOverScreen() {
+    headerNav.classList.add('d-none');
+    quizId.innerHTML = renderGameOverScreen(currentPercent);
 }
 
 
@@ -21,11 +28,8 @@ function showEndScreen() {
     quizId.innerHTML = '';
     headerNav.classList.add('d-none');
     quizId.innerHTML = renderWinEndScreen(currentPercent);
-    /*document.getElementById('end-screen').style = '';
-    document.getElementById('question-body').style = 'display: none';*/
     document.getElementById('amount-of-questions').innerHTML = `${questions.length} Fragen`;
     document.getElementById('amount-of-right-questions').innerHTML = `${rightQuestions} Fragen`;
-    //document.getElementById('header-image').src = 'img/win.png';
 }
 
 function updateToNextQuestion() {
@@ -64,7 +68,7 @@ function answer(selection) {
 function ratedAnswer(selection, question, selectedQuestionNumber, idOfRightAnswer) {
     if (selectedQuestionNumber == question['right_answer']) {
         answerTrue(selection, idOfRightAnswer);
-        currentPoints = currentPoints + 10;
+        currentPoints = currentPoints + 2;
         disableAnswers();
     } else {
         answerFalse(selection, idOfRightAnswer);
@@ -169,24 +173,25 @@ function resetAnswerButtons() {
 
 
 function closeInGame() {
-    let points = rankingPoints[0] + currentPoints;
-    rankingPoints.push(points);
-    rankingPoints.splice(0, 1);
-
-    let questions = completedQuestions + currentQuestion;
-    completedQuestions.push(questions);
-    completedQuestions.splice(0, 1);
-
-    let rankingPointsAsText = JSON.stringify(rankingPoints);
-    localStorage.setItem('ranking' , rankingPointsAsText);
-    let completedQuestionsAsText = JSON.stringify(completedQuestions);
-    localStorage.setItem('questions' , completedQuestionsAsText);
-
-    quizId.innerHTML = '';
-    headerNav.innerHTML = '';
+    if (currentQuestion == questions.length) {
+        pushAndSplicePoints();
+    }
     headerNav.classList.remove('d-none');
     rightQuestions = 0;
     currentQuestion = 0;
     currentPoints = 0;
+    quizTime = 1 * 60;
+    timerRunning = false;
     init();
+}
+
+
+function pushAndSplicePoints() {
+    let points = rankingPoints[0] + currentPoints;
+    rankingPoints.push(points);
+    rankingPoints.splice(0, 1);
+    let allQuestions = allRightQuestions[0] + rightQuestions;
+    allRightQuestions.push(allQuestions);
+    allRightQuestions.splice(0, 1);
+    savePlayerPoints(rankingPoints, allRightQuestions);
 }

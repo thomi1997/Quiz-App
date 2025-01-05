@@ -1,6 +1,10 @@
 let questions = [];
 let rightQuestions = 0;
 let currentQuestion = 0;
+let playerUnknow = 'player-unknown';
+
+
+let quizTime = 1 * 60; //3 * 60
 
 
 let audio_success = new Audio('audio/success.mp3');
@@ -26,12 +30,11 @@ let urlFunnyThingsThatChildrenBelieve = './scripts/questions/funny-things-that-c
 function init() {
     loadPlayer();
     if (playerName.length === 0) {
-        let playerUnknow = 'player-unknown';
         headerNav.innerHTML = renderHeaderThemes(playerUnknow);
         quizId.innerHTML = renderQuizThemeMenu(0, 0);
     } else if (playerName) {
         headerNav.innerHTML = renderHeaderThemes(playerProfile);
-        quizId.innerHTML = renderQuizThemeMenu(completedQuestions, rankingPoints);
+        quizId.innerHTML = renderQuizThemeMenu(allRightQuestions, rankingPoints);
     }
     headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
 }
@@ -69,87 +72,116 @@ async function renderQuizTheme_0(id) {
         await loadQuestions(urlFunAnimalFacts);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_1(id) {
     if (id == 1) {
+        quizTime = quizTime + 1 * 60;
         await loadQuestions(urlEmbarrassingMomentsInEverydayLife);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_2(id) {
     if (id == 2) {
+        quizTime = quizTime + 2 * 60;
         await loadQuestions(urlStrangeEatingHabits);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_3(id) {
     if (id == 3) {
+        quizTime = quizTime + 3 * 60;
         await loadQuestions(urlMovieAndSeriesParodies);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_4(id) {
     if (id == 4) {
+        quizTime = quizTime + 4 * 60;
         await loadQuestions(urlUselessKnowledge);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_5(id) {
     if (id == 5) {
+        quizTime = quizTime + 5 * 60;
         await loadQuestions(urlSuperheroesOnTheWrongTrack);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_6(id) {
     if (id == 6) {
+        quizTime = quizTime + 6 * 60;
         await loadQuestions(urlMishapsInTheKitchen);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_7(id) {
     if (id == 7) {
+        quizTime = quizTime + 7 * 60;
         await loadQuestions(urlStrangeInventions);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_8(id) {
     if (id == 8) {
+        quizTime = quizTime + 8 * 60;
         await loadQuestions(urlUnexpectedFactsAboutCelebrities);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
 
 async function renderQuizTheme_9(id) {
     if (id == 9) {
+        quizTime = quizTime + 9 * 60;
         await loadQuestions(urlFunnyThingsThatChildrenBelieve);
         clearQuizAndNav();
         renderQuizAndNav();
+        timerRunning = true;
+        startCounter(quizTime);
     }
 }
 
