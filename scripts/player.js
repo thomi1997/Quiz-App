@@ -15,6 +15,8 @@ function createPlayer() {
     if (playerName.length === 0) {
         pushToPlayerArrays(name);
         document.getElementById('name').value = '';
+        wasRenderSideNav = false;
+        init();
     } else {
         alert("Du kannst nur ein Player erstellen!");
     }
@@ -33,7 +35,6 @@ function pushToPlayerArrays(name) {
 
 function selectPlayer(element) {
     currentSelectionProfile = element.id;
-    console.log(currentSelectionProfile);
     document.getElementById(`${currentSelectionProfile}`).classList.add('selection-marker');
     if (previouCurrentSelectionProfile !== currentSelectionProfile) {
         document.getElementById(`${previouCurrentSelectionProfile}`).classList.remove('selection-marker');
@@ -91,6 +92,8 @@ function deletePlayer() {
     playerProfile.splice(0, 1);
     rankingPoints.splice(0, 1);
     allRightQuestions.splice(0, 1);
+    wasRenderSideNav = false;
     savePlayer();
+    init();
     headerNav.innerHTML = renderHeaderThemes(playerUnknow);
 }

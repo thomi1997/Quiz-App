@@ -2,9 +2,8 @@ let questions = [];
 let rightQuestions = 0;
 let currentQuestion = 0;
 let playerUnknow = 'player-unknown';
-
-
 let quizTime = 1 * 60; //3 * 60
+let wasRenderSideNav = false;
 
 
 let audio_success = new Audio('audio/success.mp3');
@@ -13,6 +12,8 @@ let audio_fail = new Audio('audio/fail.mp3');
 
 const quizId = document.getElementById('quiz_id');
 const headerNav = document.getElementById('header-nav');
+const sideNav = document.getElementById('side-nav');
+//const sideNavOpened = document.querySelector('.sidenav__opened');
 
 
 let urlFunAnimalFacts = './scripts/questions/fun-animal-facts.json';
@@ -32,9 +33,21 @@ function init() {
     if (playerName.length === 0) {
         headerNav.innerHTML = renderHeaderThemes(playerUnknow);
         quizId.innerHTML = renderQuizThemeMenu(0, 0);
+        if (!wasRenderSideNav) {
+            sideNav.innerHTML = renderSideNav(playerUnknow);
+            wasRenderSideNav = true;
+        } else {
+            console.log("Aufgabe wurde bereits ausgeführt.");
+        }
     } else if (playerName) {
         headerNav.innerHTML = renderHeaderThemes(playerProfile);
         quizId.innerHTML = renderQuizThemeMenu(allRightQuestions, rankingPoints);
+        if (!wasRenderSideNav) {
+            sideNav.innerHTML = renderSideNav(playerProfile);
+            wasRenderSideNav = true;
+        } else {
+            console.log("Aufgabe wurde bereits ausgeführt.");
+        }
     }
     headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
 }

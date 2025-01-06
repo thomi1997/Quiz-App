@@ -138,7 +138,6 @@ function disableAnswers() {
 
 function nextQuestion() {
     currentQuestion++;
-    console.log('current points', currentPoints);
     document.getElementById('next-button').disabled = true;
     document.getElementById('next-button').style="opacity: 0.8;";
     document.getElementById('next-button').classList.remove('quiz__card-next-btn-hover');
