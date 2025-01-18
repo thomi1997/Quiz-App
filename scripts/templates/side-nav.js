@@ -32,11 +32,6 @@ function renderSideNav(playerProfile) {
                     Impressum
                 </label>
             </li>
-            <li>
-                <label onclick="showDataPrivacy()" for="sidenav__opened" class="sidenav__nav-link">
-                    Datenschutz
-                </label>
-            </li>
         </ul>
     </nav>
 </div>

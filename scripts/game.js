@@ -85,7 +85,7 @@ function answerTrue(selection, idOfRightAnswer) {
     document.getElementById(`letter-icon-${parentId}`).classList.add('move-icon');
     document.getElementById(`icon-bg-${parentId}`).style="background-color: rgb(204, 219, 232)";
     getParentTrueId(idOfRightAnswer)
-    //audio_success.play();
+    audio_success.play();
     rightQuestions++;
 }
 
@@ -95,7 +95,7 @@ function answerFalse(selection, idOfRightAnswer) {
     document.getElementById(idOfRightAnswer).parentNode.classList.add('color-bright-grey');
     getParentTrueId(idOfRightAnswer);
     getParentFalseId(selection);
-    //audio_fail.play();
+    audio_fail.play();
 }
 
 

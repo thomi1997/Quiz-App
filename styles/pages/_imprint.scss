@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.quiz_imprint {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.quiz_imprint-main {
+    font-family: "Roboto-Bold";
+    color: $color-white;
+    margin-bottom: 3rem;
+}
+
+.quiz_imprint-sub-main {
+    font-family: "Roboto";
+    color: $color-white;
+}

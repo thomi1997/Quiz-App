@@ -31,25 +31,35 @@ let urlFunnyThingsThatChildrenBelieve = './scripts/questions/funny-things-that-c
 function init() {
     loadPlayer();
     if (playerName.length === 0) {
-        headerNav.innerHTML = renderHeaderThemes(playerUnknow);
-        quizId.innerHTML = renderQuizThemeMenu(0, 0);
-        if (!wasRenderSideNav) {
-            sideNav.innerHTML = renderSideNav(playerUnknow);
-            wasRenderSideNav = true;
-        } else {
-            console.log("Aufgabe wurde bereits ausgeführt.");
-        }
+        renderSideNavNonePlayer();
     } else if (playerName) {
-        headerNav.innerHTML = renderHeaderThemes(playerProfile);
-        quizId.innerHTML = renderQuizThemeMenu(allRightQuestions, rankingPoints);
-        if (!wasRenderSideNav) {
-            sideNav.innerHTML = renderSideNav(playerProfile);
-            wasRenderSideNav = true;
-        } else {
-            console.log("Aufgabe wurde bereits ausgeführt.");
-        }
+        renderSideNavExistPlayer();
     }
     headerNav.style='border-bottom-right-radius: 4rem; border-bottom-left-radius: 4rem';
+}
+
+
+function renderSideNavNonePlayer() {
+    headerNav.innerHTML = renderHeaderThemes(playerUnknow);
+    quizId.innerHTML = renderQuizThemeMenu(0, 0);
+    if (!wasRenderSideNav) {
+        sideNav.innerHTML = renderSideNav(playerUnknow);
+        wasRenderSideNav = true;
+    } else {
+        console.log("Aufgabe wurde bereits ausgeführt.");
+    }
+}
+
+
+function renderSideNavExistPlayer() {
+    headerNav.innerHTML = renderHeaderThemes(playerProfile);
+    quizId.innerHTML = renderQuizThemeMenu(allRightQuestions, rankingPoints);
+    if (!wasRenderSideNav) {
+        sideNav.innerHTML = renderSideNav(playerProfile);
+        wasRenderSideNav = true;
+    } else {
+        console.log("Aufgabe wurde bereits ausgeführt.");
+    }
 }
 
 
